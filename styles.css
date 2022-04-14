@@ -1,0 +1,135 @@
+body {
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    animation: hue-animation 5s alternate infinite;
+}
+
+anime{
+    background-color: #9ADCFF;
+    
+}
+.sourire {
+    position:absolute;
+    width: 500px;
+    height: 500px;
+    padding: 0;
+    top: 50%;
+    right: 38%;
+}
+
+.sourire::before,
+.sourire::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation: rotate 1s infinite
+    cubic-bezier(.62,1.39,.3,-1.25);
+    
+}
+
+.sourire::before {
+    background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+}
+.sourire::after {
+    background-color: #e15252;
+    animation-delay: .3s;
+    -webkit-clip-path: ellipse(47% 9% at 50% 50%);
+    clip-path: ellipse(47% 9% at 50% 50%);
+    animation-duration: 2s;
+}
+    
+.animation {
+    position:absolute;
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    top: 20%;
+    right: 50%;
+}
+
+.animation::before,
+.animation::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation: rotate 1s infinite
+    cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+.animation::before {
+    background-color:#FFF89A;
+}
+.animation::after {
+    background-color: #9ADCFF;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    
+}
+    
+
+.loader {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    padding: 0;
+    top: 20%;
+    left:50%;
+
+}
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation: rotate 1s infinite
+    cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+.loader::before {
+    background-color: #FFF89A;
+}
+
+.loader::after {
+    background-color: #9ADCFF;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    
+}
+
+
+
+
+@keyframes rotate {
+    25%{
+        transform: scale(.3);
+        animation-duration: 2s;
+    }
+    50% {
+        left:0;
+        animation-duration: 2s;
+    }
+    75% {
+        transform: scale(1);
+        animation-duration: 2s;
+    }
+    
+}
+@keyframes hue-animation {
+    100% {
+        filter: hue-rotate(360deg)
+    }   
+}
